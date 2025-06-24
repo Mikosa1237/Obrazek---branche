@@ -34,6 +34,8 @@
             this.rb90 = new System.Windows.Forms.RadioButton();
             this.rb180 = new System.Windows.Forms.RadioButton();
             this.rb270 = new System.Windows.Forms.RadioButton();
+            this.invert = new System.Windows.Forms.Button();
+            this.ups = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,11 +101,35 @@
             this.rb270.Text = "270";
             this.rb270.UseVisualStyleBackColor = true;
             // 
+            // invert
+            // 
+            this.invert.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.invert.Location = new System.Drawing.Point(166, 163);
+            this.invert.Name = "invert";
+            this.invert.Size = new System.Drawing.Size(75, 23);
+            this.invert.TabIndex = 6;
+            this.invert.Text = "invert";
+            this.invert.UseVisualStyleBackColor = false;
+            this.invert.Click += new System.EventHandler(this.invert_Click);
+            // 
+            // ups
+            // 
+            this.ups.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ups.Location = new System.Drawing.Point(166, 193);
+            this.ups.Name = "ups";
+            this.ups.Size = new System.Drawing.Size(75, 23);
+            this.ups.TabIndex = 7;
+            this.ups.Text = "upsite down";
+            this.ups.UseVisualStyleBackColor = false;
+            this.ups.Click += new System.EventHandler(this.ups_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.ups);
+            this.Controls.Add(this.invert);
             this.Controls.Add(this.rb270);
             this.Controls.Add(this.rb180);
             this.Controls.Add(this.rb90);
@@ -126,6 +152,8 @@
         private System.Windows.Forms.RadioButton rb90;
         private System.Windows.Forms.RadioButton rb180;
         private System.Windows.Forms.RadioButton rb270;
+        private System.Windows.Forms.Button invert;
+        private System.Windows.Forms.Button ups;
     }
 }
 

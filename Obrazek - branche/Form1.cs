@@ -32,5 +32,30 @@ namespace Obrazek___branche
                 pictureBox.Image = bitmapa;
             }
         }
+
+        private void rotate_Click(object sender, EventArgs e)
+        {
+            if (pictureBox != null)
+            {
+                Bitmap origin = (Bitmap)pictureBox.Image;
+                Bitmap rot = new Bitmap(origin);
+
+                if (rb90.Checked)
+                {
+                    rot.RotateFlip(RotateFlipType.Rotate90FlipNone);
+                }
+                if (rb180.Checked)
+                {
+                    rot.RotateFlip(RotateFlipType.Rotate180FlipNone);
+                }
+                if (rb270.Checked)
+                {
+                    rot.RotateFlip(RotateFlipType.Rotate270FlipNone);
+                }
+
+                pictureBox.Image = rot;
+                origin.Dispose();
+            }
+        }
     }
 }

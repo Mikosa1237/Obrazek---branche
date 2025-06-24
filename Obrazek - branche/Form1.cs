@@ -32,5 +32,33 @@ namespace Obrazek___branche
                 pictureBox.Image = bitmapa;
             }
         }
+
+        private void og_Click(object sender, EventArgs e)
+        {
+            if (pictureBox.Image == null) return;
+
+            Bitmap origin = new Bitmap(pictureBox.Image);
+            Bitmap zielony = new Bitmap(origin.Width, origin.Height);
+
+            for (int x = 0; x < origin.Width; x++)
+            {
+                for (int y = 0; y < origin.Height; y++)
+                {
+                    Color pixel = origin.GetPixel(x, y);
+
+                    if (pixel.G > pixel.R && pixel.G > pixel.B)
+                    {
+                        zielony.SetPixel(x, y, pixel);
+                    }
+                    else
+                    {
+                        zielony.SetPixel(x, y, Color.Black);
+                    }
+                }
+            }
+
+            pictureBox.Image = zielony;
+            origin.Dispose();
+        }
     }
 }

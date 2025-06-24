@@ -30,6 +30,7 @@
         {
             this.pictureBox = new System.Windows.Forms.PictureBox();
             this.load = new System.Windows.Forms.Button();
+            this.og = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,11 +52,23 @@
             this.load.UseVisualStyleBackColor = true;
             this.load.Click += new System.EventHandler(this.load_Click);
             // 
+            // og
+            // 
+            this.og.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.og.Location = new System.Drawing.Point(166, 222);
+            this.og.Name = "og";
+            this.og.Size = new System.Drawing.Size(75, 23);
+            this.og.TabIndex = 2;
+            this.og.Text = "only green";
+            this.og.UseVisualStyleBackColor = false;
+            this.og.Click += new System.EventHandler(this.og_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.og);
             this.Controls.Add(this.load);
             this.Controls.Add(this.pictureBox);
             this.Name = "Form1";
@@ -69,6 +82,7 @@
 
         private System.Windows.Forms.PictureBox pictureBox;
         private System.Windows.Forms.Button load;
+        private System.Windows.Forms.Button og;
     }
 }
 
